@@ -7,5 +7,6 @@ import java.time.LocalDateTime;
 public record ErrorResponse(Integer httpCode,
                             HttpStatus httpStatus,
                             String errorMessage,
-                            LocalDateTime date) {
+                            LocalDateTime date,
+                            String errorId) {
 }

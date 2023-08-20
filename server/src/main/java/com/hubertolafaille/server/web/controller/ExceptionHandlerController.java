@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 import java.time.LocalDateTime;
+import java.util.UUID;
 
 @Slf4j
 @RestControllerAdvice
@@ -15,12 +16,14 @@ public class ExceptionHandlerController {
 
     @ExceptionHandler(Exception.class)
     public ResponseEntity<ErrorResponse> unknownException(Exception exception) {
-        log.error(exception.getMessage());
+        String errorId = UUID.randomUUID().toString();
+        log.error("{} : {}", errorId, exception.getMessage());
         return ResponseEntity.internalServerError().body(
                 new ErrorResponse(
                         HttpStatus.INTERNAL_SERVER_ERROR.value(),
                         HttpStatus.INTERNAL_SERVER_ERROR,
                         "unknown_error",
-                        LocalDateTime.now()));
+                        LocalDateTime.now(),
+                        errorId));
     }
 }
