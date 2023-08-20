@@ -12,7 +12,8 @@ public class SecurityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {
         httpSecurity.authorizeHttpRequests(authorizationManagerRequestMatcherRegistry ->
                 authorizationManagerRequestMatcherRegistry
-                        .requestMatchers("/youtube/fetch-video-info").permitAll());
+                        .requestMatchers("/youtube/fetch-video-info").permitAll()
+                        .requestMatchers("/**").denyAll());
         return httpSecurity.build();
     }
 }
