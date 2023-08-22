@@ -6,6 +6,8 @@ import com.google.api.client.json.JsonFactory;
 import com.google.api.client.json.gson.GsonFactory;
 import com.google.api.services.youtube.YouTube;
 import com.google.api.services.youtube.model.VideoListResponse;
+import com.hubertolafaille.server.domain.exception.VideoIdInvalidException;
+import com.hubertolafaille.server.domain.exception.VideoIdListSizeExceededException;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
@@ -41,5 +43,14 @@ public class YoutubeService {
         return request.setKey(youtubeApiKey)
                 .setId(youtubeVideoIdList)
                 .execute();
+    }
+
+    public void validateVideoIdList(List<String> videoIdList) throws VideoIdListSizeExceededException, VideoIdInvalidException {
+        if (videoIdList.size() > 50) {
+            throw new VideoIdListSizeExceededException("Max allowed list size is 50, but the provided list contains " + videoIdList.size() + " items.");
+        }
+        else if (videoIdList.stream().anyMatch(s -> s.length() != 11)) {
+            throw new VideoIdInvalidException("Invalid video id found");
+        }
     }
 }

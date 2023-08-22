@@ -1,6 +1,8 @@
 package com.hubertolafaille.server.web.controller;
 
-import com.hubertolafaille.server.web.dto.response.ErrorResponse;
+import com.hubertolafaille.server.domain.exception.VideoIdInvalidException;
+import com.hubertolafaille.server.domain.exception.VideoIdListSizeExceededException;
+import com.hubertolafaille.server.web.dto.response.ErrorResponseDTO;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -14,16 +16,29 @@ import java.util.UUID;
 @RestControllerAdvice
 public class ExceptionHandlerController {
 
-    @ExceptionHandler(Exception.class)
-    public ResponseEntity<ErrorResponse> unknownException(Exception exception) {
+    private ErrorResponseDTO generateErrorResponseDTO(Exception exception, HttpStatus httpStatus, String errorMessage) {
         String errorId = UUID.randomUUID().toString();
-        log.error("{} : {}", errorId, exception.getMessage());
-        return ResponseEntity.internalServerError().body(
-                new ErrorResponse(
-                        HttpStatus.INTERNAL_SERVER_ERROR.value(),
-                        HttpStatus.INTERNAL_SERVER_ERROR,
-                        "unknown_error",
+        log.error("[ErrorId] = {} : [ErrorMessage] = {}", errorId, exception.getMessage());
+        return new ErrorResponseDTO(
+                        httpStatus.value(),
+                        httpStatus.name(),
+                        errorMessage,
                         LocalDateTime.now(),
-                        errorId));
+                        errorId);
+    }
+
+    @ExceptionHandler(Exception.class)
+    public ResponseEntity<ErrorResponseDTO> unknownException(Exception exception) {
+        return ResponseEntity.internalServerError().body(generateErrorResponseDTO(exception, HttpStatus.INTERNAL_SERVER_ERROR, "unknown_error"));
+    }
+
+    @ExceptionHandler(VideoIdListSizeExceededException.class)
+    public ResponseEntity<ErrorResponseDTO> videoIdListSizeExceededException(VideoIdListSizeExceededException exception) {
+        return ResponseEntity.badRequest().body(generateErrorResponseDTO(exception, HttpStatus.BAD_REQUEST, "allowed_list_size_exceeded_error"));
+    }
+
+    @ExceptionHandler(VideoIdInvalidException.class)
+    public ResponseEntity<ErrorResponseDTO> videoIdInvalidException(VideoIdInvalidException exception) {
+        return ResponseEntity.badRequest().body(generateErrorResponseDTO(exception, HttpStatus.BAD_REQUEST, "video_id_invalid"));
     }
 }
