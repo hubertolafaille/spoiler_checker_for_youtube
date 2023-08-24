@@ -47,7 +47,7 @@ public class YoutubeService {
 
     public void validateVideoIdList(List<String> videoIdList) throws VideoIdListSizeExceededException, VideoIdInvalidException {
         if (videoIdList.size() > 50) {
-            throw new VideoIdListSizeExceededException("Max allowed list size is 50, but the provided list contains " + videoIdList.size() + " items.");
+            throw new VideoIdListSizeExceededException("Max allowed list size is 50, but the provided list contains more");
         }
         else if (videoIdList.stream().anyMatch(s -> s.length() != 11)) {
             throw new VideoIdInvalidException("Invalid video id found");
