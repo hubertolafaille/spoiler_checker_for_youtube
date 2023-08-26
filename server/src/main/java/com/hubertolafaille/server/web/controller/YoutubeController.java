@@ -17,7 +17,6 @@ import java.util.List;
 @Slf4j
 @RestController
 @RequestMapping("/youtube")
-@CrossOrigin("https://www.youtube.com")
 public class YoutubeController {
 
     private final FetchedVideoListResponseMapper fetchedVideoListResponseMapper;
