@@ -6,6 +6,7 @@ import com.google.api.client.json.JsonFactory;
 import com.google.api.client.json.gson.GsonFactory;
 import com.google.api.services.youtube.YouTube;
 import com.google.api.services.youtube.model.VideoListResponse;
+import com.hubertolafaille.server.domain.exception.EmptyVideoIdListException;
 import com.hubertolafaille.server.domain.exception.VideoIdInvalidException;
 import com.hubertolafaille.server.domain.exception.VideoIdListSizeExceededException;
 import org.springframework.beans.factory.annotation.Value;
@@ -45,8 +46,11 @@ public class YoutubeService {
                 .execute();
     }
 
-    public void validateVideoIdList(List<String> videoIdList) throws VideoIdListSizeExceededException, VideoIdInvalidException {
-        if (videoIdList.size() > 50) {
+    public void validateVideoIdList(List<String> videoIdList) throws VideoIdListSizeExceededException, VideoIdInvalidException, EmptyVideoIdListException {
+        if (videoIdList.isEmpty()) {
+            throw new EmptyVideoIdListException("The provided list is empty");
+        }
+        else if (videoIdList.size() > 50) {
             throw new VideoIdListSizeExceededException("Max allowed list size is 50, but the provided list contains more");
         }
         else if (videoIdList.stream().anyMatch(s -> s.length() != 11)) {

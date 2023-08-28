@@ -1,5 +1,6 @@
 package com.hubertolafaille.server.web.controller;
 
+import com.hubertolafaille.server.domain.exception.EmptyVideoIdListException;
 import com.hubertolafaille.server.domain.exception.VideoIdInvalidException;
 import com.hubertolafaille.server.domain.exception.VideoIdListSizeExceededException;
 import com.hubertolafaille.server.web.dto.response.ErrorResponseDTO;
@@ -30,6 +31,11 @@ public class ExceptionHandlerController {
     @ExceptionHandler(Exception.class)
     public ResponseEntity<ErrorResponseDTO> unknownException(Exception exception) {
         return ResponseEntity.internalServerError().body(generateErrorResponseDTO(exception, HttpStatus.INTERNAL_SERVER_ERROR, "unknown_error"));
+    }
+
+    @ExceptionHandler(EmptyVideoIdListException.class)
+    public ResponseEntity<ErrorResponseDTO> emptyVideoIdListException(EmptyVideoIdListException exception) {
+        return ResponseEntity.badRequest().body(generateErrorResponseDTO(exception, HttpStatus.BAD_REQUEST, "empty_list_error"));
     }
 
     @ExceptionHandler(VideoIdListSizeExceededException.class)

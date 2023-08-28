@@ -1,6 +1,7 @@
 package com.hubertolafaille.server.web.controller;
 
 
+import com.hubertolafaille.server.domain.exception.EmptyVideoIdListException;
 import com.hubertolafaille.server.domain.exception.VideoIdInvalidException;
 import com.hubertolafaille.server.domain.exception.VideoIdListSizeExceededException;
 import com.hubertolafaille.server.domain.service.YoutubeService;
@@ -30,7 +31,7 @@ public class YoutubeController {
 
     @GetMapping("/fetch-video-info")
     public ResponseEntity<List<FetchedYoutubeVideoInfoResponseDTO>> fetchVideoInfo(@RequestParam("video-id-list") List<String> videoIdList)
-            throws GeneralSecurityException, IOException, VideoIdListSizeExceededException, VideoIdInvalidException {
+            throws GeneralSecurityException, IOException, VideoIdListSizeExceededException, VideoIdInvalidException, EmptyVideoIdListException {
         log.info("GET /fetch-video-info");
         youtubeService.validateVideoIdList(videoIdList);
         List<FetchedYoutubeVideoInfoResponseDTO> fetchedYoutubeVideoInfoResponseDTOList = fetchedVideoListResponseMapper.toFetchedYoutubeVideoInfoResponseList(
