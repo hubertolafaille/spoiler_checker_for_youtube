@@ -1,0 +1,51 @@
+#dismissible:not(.ytd-rich-shelf-renderer):not(.ytd-shelf-renderer):has(a#thumbnail[href]) {
+    pointer-events: none;
+    filter: blur(30px);
+    transition: filter 0.3s ease-in-out;
+}
+
+#dismissible.unblurred:not(.ytd-rich-shelf-renderer):not(.ytd-shelf-renderer):has(a#thumbnail[href]) {
+    pointer-events: auto;
+    filter: none;
+}
+
+.spoiler-free-badge {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: green;
+    color: white;
+    padding: 5px;
+    font-size: 12px;
+}
+
+.spoiled-element-badge {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    background-color: red;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    text-align: center;
+    width: 90%;
+    z-index: 1;
+    box-sizing: border-box;
+}
+
+.switch-visibility-button {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: blue;
+    color: white;
+    padding: 5px;
+    font-size: 12px;
+    text-align: center;
+    margin: auto;
+    width: fit-content;
+    cursor: pointer;
+    z-index: 2;
+}
