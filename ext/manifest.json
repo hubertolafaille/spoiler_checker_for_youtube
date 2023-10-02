@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Spoiler checker for Youtube extension",
   "description": "Scan Youtube content to check if it contains spoiler",
-  "version": "1.1696266292961",
+  "version": "1.0",
   "action": {
     "default_popup": "popup/popup.html",
     "default_icon": "images/icon_48.png"
