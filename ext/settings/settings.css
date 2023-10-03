@@ -12,6 +12,10 @@ body {
     gap: 16px;
 }
 
+label {
+    font-weight: bold;
+}
+
 input[type="text"] {
     width: 100%;
     padding: 8px;
@@ -69,6 +73,7 @@ button {
     color: #F5F7FA;
     border-radius: 10px;
     cursor: pointer;
+    font-weight: bold;
 }
 
 button:hover {
@@ -80,8 +85,14 @@ button:active {
     color: #121212;
 }
 
+.keyword-delete-button:active {
+    background-color: #FF8F73;
+    color: #121212;
+}
+
 .main-content-keyword-list-title {
     margin-bottom: 8px;
+    font-weight: bold;
 }
 
 .keyword-button {
