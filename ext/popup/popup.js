@@ -16,7 +16,7 @@ document.getElementById("themeToggle").addEventListener("click", function() {
     if (root.getAttribute("data-theme") === "light") {
         root.setAttribute("data-theme", "dark");
         chrome.storage.sync.set({ dataTheme: "dark" }, function () {
-            console.log('Switched to light dark');
+            console.log('Switched to dark theme');
         });
         document.getElementById('theme-icon').textContent = 'dark_mode';
     } else {
