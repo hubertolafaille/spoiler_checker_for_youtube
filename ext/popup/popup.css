@@ -1,7 +1,25 @@
+:root[data-theme="light"] {
+    --text: #000000;
+    --background: #ffffff;
+    --primary: #e51f23;
+    --secondary: #d3d3d9;
+    --accent: #687878;
+    --lighter: rgba(0, 0, 0, 0.07);
+}
+
+:root[data-theme="dark"] {
+    --text: #ffffff;
+    --background: #000000;
+    --primary: #e01a1e;
+    --secondary: #26262c;
+    --accent: #879797;
+    --lighter: rgba(255, 255, 255, 0.07);
+}
+
 html {
     min-width: 300px;
-    background-color: #121212;
-    color: #F5F7FA;
+    background-color: var(--background);
+    color: var(--text);
 }
 
 body {
@@ -19,13 +37,14 @@ input[type="text"] {
     padding: 8px;
     margin: 8px 0;
     box-sizing: border-box;
-    border: 1px solid #ccc;
+    border: 1px solid var(--secondary);
+    background-color: var(--secondary);
     border-radius: 10px;
 }
 
 input[type="text"]:focus {
-    background-color: #FFE380;
-    color: #121212;
+    color: var(--text);
+    outline: 1px solid var(--accent);
 }
 
 .header-content {
@@ -35,15 +54,8 @@ input[type="text"]:focus {
     justify-content: center;
 }
 
-.header-content-icon {
-}
-
-.header-content-title {
-
-}
-
 .main-content {
-    background-color: #1F2933;
+    background-color: var(--lighter);
     padding-block: 8px;
     border-radius: 10px;
 }
@@ -55,25 +67,24 @@ input[type="text"]:focus {
 
 button {
     padding: 8px 16px;
-    background-color: #616E7C;
+    background-color: var(--primary);
     border: none;
-    color: #F5F7FA;
-    border-radius: 10px;
+    color: var(--text);
+    border-radius: 6px;
     cursor: pointer;
-    font-weight: bold;
+}
+
+.main-content-add-keyword-form-button-reset {
+    background-color: var(--secondary);
 }
 
 button:hover {
-    background-color: #4B5563;
+    outline: 2px solid var(--accent);
 }
 
 button:active {
-    background-color: #FFE380;
-    color: #121212;
-}
-
-.main-content-add-keyword-form-button-reset:active {
-    background-color: #FF8F73;
+    background-color: var(--accent);
+    color: var(--text);
 }
 
 .main-content-add-keyword-form-button {
@@ -84,7 +95,6 @@ button:active {
 .main-content-param {
     display: flex;
     flex-direction: column;
-    gap: 8px;
 }
 
 .main-content-param-element {
@@ -94,23 +104,23 @@ button:active {
     align-items: center;
     gap: 10px;
     margin-top: 16px;
-    background-color: #1F2933;
+    background-color: var(--lighter);
     border-radius: 10px;
 }
 
 .main-content-param-element:hover {
-    background-color: #616E7C;
+    outline: 2px solid var(--accent);
     border-radius: 10px;
     cursor: pointer;
 }
 
 .main-content-param-element:active {
-    background-color: #FFE380;
-    color: #121212;
+    background-color: var(--accent);
+    color: var(--text);
 }
 
 .footer-content {
-    background-color: #1F2933;
+    background-color: var(--lighter);
     border-radius: 10px;
     text-align: center;
     padding-block: 8px;

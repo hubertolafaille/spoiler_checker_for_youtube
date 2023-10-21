@@ -1,10 +1,42 @@
 let keywords = [];
+const root = document.documentElement;
 
 document.addEventListener('DOMContentLoaded', function () {
+    loadDataTheme();
     loadKeywords();
     focusInputForm();
     initAddKeywordForm();
 });
+
+document.getElementById("themeToggle").addEventListener("click", function() {
+    if (root.getAttribute("data-theme") === "light") {
+        root.setAttribute("data-theme", "dark");
+        chrome.storage.sync.set({ dataTheme: "dark" }, function () {
+            console.log('Switched to light dark');
+        });
+        document.getElementById('theme-icon').textContent = 'dark_mode';
+    } else {
+        root.setAttribute("data-theme", "light");
+        chrome.storage.sync.set({ dataTheme: "light" }, function () {
+            console.log('Switched to light theme');
+        });
+        document.getElementById('theme-icon').textContent = 'light_mode';
+
+    }
+});
+
+function loadDataTheme() {
+    chrome.storage.sync.get('dataTheme', function (data) {
+        if (data.dataTheme) {
+            root.setAttribute("data-theme", data.dataTheme);
+            document.getElementById('theme-icon').textContent = data.dataTheme+'_mode';
+        } else {
+            root.setAttribute("data-theme", "light");
+            document.getElementById('theme-icon').textContent = 'light_mode';
+        }
+    });
+    console.log(chrome.storage.sync.get('dataTheme'));
+}
 
 function loadKeywords() {
     chrome.storage.sync.get('keywords', function (data) {
