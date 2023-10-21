@@ -103,6 +103,11 @@ button {
 
 button[type=submit] {
     background-color: var(--primary);
+    font-weight: normal;
+}
+
+button[type=reset] {
+    font-weight: normal;
 }
 
 button:hover {
