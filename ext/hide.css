@@ -13,25 +13,27 @@
     position: absolute;
     top: 0;
     right: 0;
-    background-color: green;
+    background-color: #008b2c;
     color: white;
     padding: 5px;
     font-size: 12px;
+    border-radius: 6px;
 }
 
 .spoiled-element-badge {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, 50%);
-    background-color: red;
+    top: 30%;
+    left: 30%;
+    transform: translate(-30%, 30%);
+    background-color: #CB2A2A;
     color: white;
     padding: 10px;
     font-size: 16px;
     text-align: center;
-    width: 90%;
-    z-index: 1;
+    width: 100%;
+    z-index: 2;
     box-sizing: border-box;
+    border-radius: 6px;
 }
 
 .switch-visibility-button {
@@ -39,7 +41,7 @@
     top: 0;
     left: 0;
     right: 0;
-    background-color: blue;
+    background-color: #1728e0;
     color: white;
     padding: 5px;
     font-size: 12px;
@@ -48,4 +50,10 @@
     width: fit-content;
     cursor: pointer;
     z-index: 2;
+    border-radius: 6px;
+    border: none;
+}
+
+.switch-visibility-button:hover {
+    outline: 2px solid #CB2A2A;
 }
