@@ -4,7 +4,7 @@
 <br />
 <div align="center">
 
-[//]: # (  <a href="https://github.com/hubertolafaille/lee_sin">)
+[//]: # (  <a href="https://github.com/hubertolafaille/spoiler_checker_for_youtube">)
 
 [//]: # (    <img src="readme_ressource/image/lee_sin_logo.svg" alt="Logo" width="80" height="80">)
 
@@ -87,10 +87,10 @@ You'll need :
 
 ### Installation
 
-1. Download the zip of the project https://github.com/hubertolafaille/lee_sin/archive/refs/heads/main.zip and extract it.
+1. Download the zip of the project https://github.com/hubertolafaille/spoiler_checker_for_youtube/archive/refs/heads/main.zip and extract it.
    - Or, you can clone the project with git if you prefer
    ```sh
-   git clone https://github.com/hubertolafaille/lee_sin
+   git clone https://github.com/hubertolafaille/spoiler_checker_for_youtube.git
    ```
 2. Enter your API key, application name and a chose username and password in `server/src/main/resources/application.properties`
    ```properties
