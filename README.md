@@ -113,7 +113,7 @@ You'll need :
    ```js
    const API_URL = 'ENTER_YOUR_SERVER_ADDRESS';
    ```
-5. Load the folder extension `ext/`. See https://developer.chrome.com/docs/extensions/mv3/getstarted/development-basics/#load-unpacked 
+5. In Chrome, load the extension by navigating to the extensions page (chrome://extensions/), enabling Developer Mode, and then selecting 'Load unpacked'. Choose the `ext/` folder. For detailed instructions, see [Load an unpacked extension](https://developer.chrome.com/docs/extensions/mv3/getstarted/development-basics/#load-unpacked ).
    
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
