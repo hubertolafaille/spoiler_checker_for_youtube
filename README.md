@@ -8,10 +8,10 @@
 
 [//]: # (  </a>)
 
-<h3 align="center">Spoiler checker for Youtube extension</h3>
+<h3 align="center">Spoiler Checker for YouTube</h3>
 
   <p align="center">
-    A Chrome extension to dodge spoiler on Youtube
+    A Chrome extension to dodge spoilers on YouTube
     <br />
     <br />
   </p>
@@ -64,7 +64,7 @@ The 'Spoiler Checker for YouTube' Chrome extension is specifically designed to p
     <li><img src="readme_resources/image/spring.svg" height="40px" alt="logo spring"/> <span style="color: white; background-color: black">Spring</span></li>
     <li><img src="readme_resources/image/maven.svg" height="40px" alt="logo maven"/> <span style="color: white; background-color: black">Maven</span></li>
     <li><img src="readme_resources/image/java.svg" height="40px" alt="logo java"/> <span style="color: white; background-color: black">Java</span></li>
-    <li><img src="readme_resources/image/youtube.png" height="40px" alt="logo youtube data api"/> <span style="color: white; background-color: black">Youtube data API</span></li>
+    <li><img src="readme_resources/image/youtube.png" height="40px" alt="logo youtube data api"/> <span style="color: white; background-color: black">YouTube data API</span></li>
 </ul>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -81,7 +81,7 @@ To begin using the 'Spoiler Checker for YouTube', please follow the steps outlin
 You'll need :
 * Chrome browser that you can get at https://www.google.com/intl/en/chrome/
 * Docker that you can get at https://www.docker.com/get-started/
-* Youtube data API key that you can get at https://developers.google.com/youtube/v3/getting-started
+* YouTube data API key that you can get at https://developers.google.com/youtube/v3/getting-started
 
 ### Installation
 
@@ -109,7 +109,7 @@ You'll need :
    ```
 4. Enter your server address in `ext/scripts/content.js`
    ```js
-   const API_URL = 'ENTER_YOUR_SERVER_ADDRESS'
+   const API_URL = 'ENTER_YOUR_SERVER_ADDRESS';
    ```
 5. Load the folder extension `ext/`. See https://developer.chrome.com/docs/extensions/mv3/getstarted/development-basics/#load-unpacked 
    
