@@ -46,7 +46,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-<img src="readme_resources/image/lee_sin_spoil_blocked.png" alt="project screenshot" style="margin-inline: auto; display: block"/>
+<p align="center"><img src="readme_resources/image/lee_sin_spoil_blocked.png" alt="project screenshot"/></p>
 
 The 'Spoiler Checker for YouTube' Chrome extension is specifically designed to protect YouTube users from unwanted spoilers. It works by analyzing video titles, descriptions, and tags, and then comparing them with the keywords you have selected. Thanks to this, the extension ensures a spoiler-free viewing experience on YouTube.
 
@@ -85,8 +85,7 @@ You'll need :
 
 ### Installation
 
-1. Download the zip of the project https://github.com/hubertolafaille/lee_sin/archive/refs/heads/main.zip and extract it. 
-  <br>
+1. Download the zip of the project https://github.com/hubertolafaille/lee_sin/archive/refs/heads/main.zip and extract it.
    - Or, you can clone the project with git if you prefer
    ```sh
    git clone https://github.com/hubertolafaille/lee_sin
@@ -100,7 +99,6 @@ You'll need :
    spring.security.user.password=ENTER_A_PASSWORD
    ```
 3. Build and run a docker image of the server 
-   <br> 
    - Open a terminal in `server/` and execute :
    ```sh
     docker build -t ENTER_A_NAME_FOR_THE_DOCKER_IMAGE .
