@@ -30,6 +30,10 @@ body {
     gap: 16px;
 }
 
+h1 {
+    text-align: center;
+}
+
 label {
     font-weight: bold;
 }

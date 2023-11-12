@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
-  "name": "Spoiler checker for Youtube extension",
-  "description": "Scan Youtube content to check if it contains spoiler",
+  "name": "Spoiler Checker for YouTube",
+  "description": "A Chrome extension to dodge spoilers on YouTube",
   "version": "1.0",
   "action": {
     "default_popup": "popup/popup.html",
