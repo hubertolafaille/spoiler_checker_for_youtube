@@ -2,7 +2,8 @@ const DEBOUNCE_TIME = 500;
 const MAX_REQUEST_PARAM_SIZE = 50;
 const THUMBNAIL_ANCHOR_SELECTOR = 'a#thumbnail';
 const YOUTUBE_CONTENT_HTML_ELEMENT_SELECTOR = '#dismissible:not(.ytd-rich-shelf-renderer):not(.ytd-shelf-renderer):has(' + THUMBNAIL_ANCHOR_SELECTOR + '[href])';
-const API_URL = '';
+const API_ENDPOINT = '/youtube/fetch-video-info?video-id-list=';
+const API_URL = 'ENTER_YOUR_SERVER_ADDRESS';
 
 observeDOM();
 
@@ -107,7 +108,7 @@ async function fetchYoutubeContentInfo(youtubeContentToFetchInfoList) {
 async function makeRequest(youtubeContentListToFetchPack) {
     let fetchedYoutubeContentInfoList = [];
     const requestParams = youtubeContentListToFetchPack.map(element => element.id).join(',');
-    const requestUrl = API_URL + requestParams;
+    const requestUrl = API_URL + API_ENDPOINT + requestParams;
     await fetch(requestUrl)
         .then(response => {
             if (!response.ok) {
