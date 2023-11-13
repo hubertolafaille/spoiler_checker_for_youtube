@@ -59,14 +59,14 @@ The 'Spoiler Checker for YouTube' Chrome extension is specifically designed to p
 ### Built With
 <br>
 <ul>
-    <li><img src="readme_resources/image/html5.svg" height="40px" alt="logo html 5"/> <span style="color: white; background-color: black">HTML 5</span></li>
-    <li><img src="readme_resources/image/css3.svg" height="40px" alt="logo css 3"/> <span style="color: white; background-color: black">CSS 3</span></li>
-    <li><img src="readme_resources/image/javascript.svg" height="40px" alt="logo javascript"/> <span style="color: white; background-color: black">Javascript</span></li>
-    <li><img src="readme_resources/image/docker.svg" height="40px" alt="logo docker"/> <span style="color: white; background-color: black">Docker</span></li>
-    <li><img src="readme_resources/image/spring.svg" height="40px" alt="logo spring"/> <span style="color: white; background-color: black">Spring</span></li>
-    <li><img src="readme_resources/image/maven.svg" height="40px" alt="logo maven"/> <span style="color: white; background-color: black">Maven</span></li>
-    <li><img src="readme_resources/image/java.svg" height="40px" alt="logo java"/> <span style="color: white; background-color: black">Java</span></li>
-    <li><img src="readme_resources/image/youtube.png" height="40px" alt="logo youtube data api"/> <span style="color: white; background-color: black">YouTube data API</span></li>
+    <li><img src="readme_resources/image/html5.svg" height="40px" alt="logo html 5"/> HTML 5</li>
+    <li><img src="readme_resources/image/css3.svg" height="40px" alt="logo css 3"/> CSS 3</li>
+    <li><img src="readme_resources/image/javascript.svg" height="40px" alt="logo javascript"/> Javascript</li>
+    <li><img src="readme_resources/image/docker.svg" height="40px" alt="logo docker"/> Docker</li>
+    <li><img src="readme_resources/image/spring.svg" height="40px" alt="logo spring"/> Spring</li>
+    <li><img src="readme_resources/image/maven.svg" height="40px" alt="logo maven"/> Maven</li>
+    <li><img src="readme_resources/image/java.svg" height="40px" alt="logo java"/> Java</li>
+    <li><img src="readme_resources/image/youtube.png" height="40px" alt="logo youtube data api"/> YouTube data API</li>
 </ul>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
