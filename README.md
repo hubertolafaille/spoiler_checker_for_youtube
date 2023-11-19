@@ -4,11 +4,9 @@
 <br />
 <div align="center">
 
-[//]: # (  <a href="https://github.com/hubertolafaille/spoiler_checker_for_youtube">)
-
-[//]: # (    <img src="readme_ressource/image/lee_sin_logo.svg" alt="Logo" width="80" height="80">)
-
-[//]: # (  </a>)
+  <a href="https://github.com/hubertolafaille/spoiler_checker_for_youtube">
+    <img src="readme_resources/image/lee_sin_logo.svg" alt="Logo" width="80" height="80">
+  </a>
 
 <h3 align="center">Spoiler Checker for YouTube</h3>
 
@@ -57,6 +55,7 @@ The 'Spoiler Checker for YouTube' Chrome extension is specifically designed to p
 
 
 ### Built With
+
 <br>
 <ul>
     <li><img src="readme_resources/image/html5.svg" height="40px" alt="logo html 5"/> HTML 5</li>
