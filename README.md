@@ -123,11 +123,11 @@ You'll need :
 ## Usage
 
 - Visit https://www.youtube.com
-- Click on the icon of the extension to open it
-- You can add keyword. if a video title, description or tag match, the extension will blur it.
+- You can click on the icon of the extension to open it
+- You can add keyword. If a video title, description or tag match, the extension will blur it.
 - You can go to the settings to have more options like delete keywords previously added.
 - You can switch into light or dark theme.
-- Turn off the extension in the extension page (chrome://extensions/).
+- You can turn off the extension in the extension page (chrome://extensions/).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
