@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Spoiler Checker for YouTube</title>
+    <link rel="stylesheet" href="popup.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+</head>
+<body>
+<header>
+    <div class="header-content">
+        <div class="header-content-icon">
+        </div>
+        <div class="header-content-title">
+            <h1>Spoiler Checker for YouTube</h1>
+        </div>
+    </div>
+</header>
+<main>
+    <div class="main-content">
+        <div class="main-content-add-keyword">
+            <form id="add-keyword-form">
+                <label for="add-keyword-input">Quick Add : </label>
+                <input type="text" id="add-keyword-input" placeholder="Keyword">
+                <div class="main-content-add-keyword-form-button">
+                    <button type="reset" id="add-keyword-button-reset" class="main-content-add-keyword-form-button-reset">Cancel</button>
+                    <button type="submit" id="add-keyword-button-submit">Add</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="main-content-param">
+        <div id="navigateToParamButton" class="main-content-param-element">
+            <span class="material-symbols-outlined">settings</span>
+            Settings
+        </div>
+        <div id="themeToggle" class="main-content-param-element">
+            <span id="theme-icon" class="material-symbols-outlined"></span>
+            Light/Dark
+        </div>
+    </div>
+</main>
+<footer>
+    <div class="footer-content">
+        <span>v1.0</span>
+    </div>
+</footer>
+<script src="popup.js"></script>
+</body>
+</html>

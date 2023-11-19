@@ -1,0 +1,131 @@
+:root[data-theme="light"] {
+    --text: #000000;
+    --background: #ffffff;
+    --primary: #e51f23;
+    --secondary: #d3d3d9;
+    --accent: #687878;
+    --lighter: rgba(0, 0, 0, 0.07);
+}
+
+:root[data-theme="dark"] {
+    --text: #ffffff;
+    --background: #000000;
+    --primary: #e01a1e;
+    --secondary: #26262c;
+    --accent: #879797;
+    --lighter: rgba(255, 255, 255, 0.07);
+}
+
+html {
+    min-width: 300px;
+    background-color: var(--background);
+    color: var(--text);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+h1 {
+    text-align: center;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid var(--secondary);
+    background-color: var(--secondary);
+    border-radius: 10px;
+}
+
+input[type="text"]:focus {
+    color: var(--text);
+    outline: 1px solid var(--accent);
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-content {
+    background-color: var(--lighter);
+    padding-block: 8px;
+    border-radius: 10px;
+}
+
+.main-content-add-keyword {
+    padding-inline: 16px;
+    padding-block: 8px;
+}
+
+button {
+    padding: 8px 16px;
+    background-color: var(--primary);
+    border: none;
+    color: var(--text);
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.main-content-add-keyword-form-button-reset {
+    background-color: var(--secondary);
+}
+
+button:hover {
+    outline: 2px solid var(--accent);
+}
+
+button:active {
+    background-color: var(--accent);
+    color: var(--text);
+}
+
+.main-content-add-keyword-form-button {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.main-content-param {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-content-param-element {
+    padding-block: 8px;
+    padding-left: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 16px;
+    background-color: var(--lighter);
+    border-radius: 10px;
+}
+
+.main-content-param-element:hover {
+    outline: 2px solid var(--accent);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.main-content-param-element:active {
+    background-color: var(--accent);
+    color: var(--text);
+}
+
+.footer-content {
+    background-color: var(--lighter);
+    border-radius: 10px;
+    text-align: center;
+    padding-block: 8px;
+}
