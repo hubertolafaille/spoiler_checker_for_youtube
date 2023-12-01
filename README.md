@@ -82,7 +82,7 @@ To begin using the 'Spoiler Checker for YouTube', please follow the steps outlin
 You'll need :
 * Chrome browser that you can get at https://www.google.com/intl/en/chrome/
 * Docker that you can get at https://www.docker.com/get-started/
-* YouTube data API key that you can get at https://developers.google.com/youtube/v3/getting-started
+* YouTube data API and a API key that you can get at https://developers.google.com/youtube/v3/getting-started
 
 ### Installation
 
@@ -91,28 +91,28 @@ You'll need :
    ```sh
    git clone https://github.com/hubertolafaille/spoiler_checker_for_youtube.git
    ```
-2. Enter your API key, application name and a chose username and password in `server/src/main/resources/application.properties`
+2. Enter your API key, application name and a chose username and password in `/server/src/main/resources/application.properties`
    ```properties
    youtube.api.key=ENTER_YOUR_API_KEY
    youtube.application.name=ENTER_YOUR_YOUTUBE_APPLICATION_NAME
 
-   spring.security.user.name=ENTER_A_USERNAME
-   spring.security.user.password=ENTER_A_PASSWORD
+   spring.security.user.name=CHOOSE_AND_ENTER_A_USERNAME
+   spring.security.user.password=CHOOSE_AND_ENTER_A_PASSWORD
    ```
 3. Build and run a docker image of the server 
-   - Open a terminal in `server/` and execute :
+   - Open a terminal in `/server/` and execute :
    ```sh
-    docker build -t ENTER_A_NAME_FOR_THE_DOCKER_IMAGE .
+    docker build -t CHOOSE_AND_ENTER_A_NAME_FOR_THE_DOCKER_IMAGE .
    ```
     - Then to run it, execute :
    ```sh
-    docker run -d -p ENTER_A_AVAILABLE_PORT:8080 --name ENTER_A_NAME_FOR_THE_DOCKER_CONTAINER YOUR_DOCKER_IMAGE
+    docker run -d -p CHOOSE_AND_ENTER_A_AVAILABLE_PORT:8080 --name CHOOSE_AND_ENTER_A_NAME_FOR_THE_DOCKER_CONTAINER YOUR_DOCKER_IMAGE_NAME
    ```
-4. Enter your server address in `ext/scripts/content.js`
+4. Open the file `/ext/scripts/content.js` with a text editor and replace the API_URL value with your server's address. For instance, if your server is running locally on port 8080, use http://localhost:8080. Be sure to use the correct address that matches your server configuration.
    ```js
    const API_URL = 'ENTER_YOUR_SERVER_ADDRESS';
    ```
-5. In Chrome, load the extension by navigating to the extensions page (chrome://extensions/), enabling Developer Mode, and then selecting 'Load unpacked'. Choose the `ext/` folder. For detailed instructions, see [Load an unpacked extension](https://developer.chrome.com/docs/extensions/mv3/getstarted/development-basics/#load-unpacked ).
+5. In Chrome, load the extension by navigating to the extensions page (chrome://extensions/), enabling Developer Mode, and then selecting 'Load unpacked'. Choose the `/ext/` folder. For detailed instructions, see [Load an unpacked extension](https://developer.chrome.com/docs/extensions/mv3/getstarted/development-basics/#load-unpacked ).
    
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
