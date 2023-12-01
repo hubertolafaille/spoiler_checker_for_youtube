@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Spoiler Checker for YouTube",
   "description": "A Chrome extension to dodge spoilers on YouTube",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "icons": {
     "16": "images/lee_sin_logo_16.png",
     "32": "images/lee_sin_logo_32.png",
